@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "id": "a",
+      "title": "prueba de texto rebasado largo"
+    },
+    {
+      "id": "b",
+      "title": "bbbb"
+    },
+    {
+      "id": "c",
+      "title": "GRP"
+    },
+    {
+      "id": "d",
+      "title": "d"
+    },
+    {
+      "id": "e",
+      "title": "e"
+    },
+    {
+      "id": "f",
+      "title": "Node in bottom band"
+    }
+  ],
+  "links": [
+    {
+      "source": "a",
+      "target": "c",
+      "value": 1,
+      "type": "1"
+    },
+    {
+      "source": "a",
+      "target": "f",
+      "value": 0.1,
+      "type": "1"
+    },
+    {
+      "source": "b",
+      "target": "c",
+      "value": 0.1,
+      "type": "1"
+    },
+    {
+      "source": "c",
+      "target": "d",
+      "value": 0.1,
+      "type": "4"
+    },
+    {
+      "source": "c",
+      "target": "e",
+      "value": 0.1,
+      "type": "1"
+    },
+    {
+      "source": "f",
+      "target": "e",
+      "value": 0.1,
+      "type": "1"
+    },
+
+    {
+      "source": "b",
+      "target": "f",
+      "value": 0.1,
+      "type": "1"
+    }
+  ],
+  "groups": [
+    {
+      "id": "g",
+      "nodes": [
+        "a",
+        "b"
+      ],
+      "title": "Group of nodes in top band"
+    }
+  ],
+  "order": [
+    [
+      [
+        "a",
+        "b"
+      ],
+      []
+    ],
+    [
+      [
+        "c"
+      ],
+      [
+        "f"
+      ]
+    ],
+    [
+      [
+        "d",
+        "e"
+      ],
+      []
+    ]
+  ]
+}

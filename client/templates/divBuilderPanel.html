@@ -1,0 +1,21 @@
+<template name="divBuilderPanel">
+  <!--div class="divBuilderPanelWindow" onmousedown='mydragg.startMoving(this, {{panelElement}} ,event);' onmouseup='mydragg.stopMoving( {{panelElement}} );' -->
+  <div class="divBuilderPanelWindow scaleable-wrapper" >
+
+    <div style="overflow-y:auto;overflow-x:auto;width:100%;height:100%;"  >
+      {{#if isHtml }}
+         {{{content}}}
+      {{else}}
+         {{> Template.dynamic template=content data=params }}
+      {{/if}}
+    </div>
+    <div  class="divBuilderTitle" style="position:absolute;top:0;width:100%;" >
+      <div class="container-fluid" style="float:right;position:absolute;top:0;right:0;width:100%;text-align:right;">
+        {{title}}
+        <a class="toggle-fullscreen" ><i class="fa fa-window-maximize "></i></a>
+        <a class="close-panel" ><i class="fa fa-window-close "></i></a>
+      </div>
+    </div>
+  </div>
+
+</template>

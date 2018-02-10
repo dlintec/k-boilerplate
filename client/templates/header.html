@@ -1,0 +1,75 @@
+<template name="header">
+  {{#if Template.subscriptionsReady}}
+
+  <header class="navbar-fixed-top " role="navigation">
+    <nav class="navbar navbar-default" style="background-color:{{ dict 'site.menuBackground' }};">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="scroll-home site-logo" href="/#"><img src="{{ gridfsURL (dict 'site.logo.url' '/dlintec_circ80.fw.png') }}" width="{{ dict 'site.logo.info.width' }}"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a class="active scroll-home" href="/#"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></li>
+            <li class="dropdown" >
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Secciones <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                {{# each sections }}
+                  <li><a class="scroll-link" href="{{ id }}">
+                    {{ title }}
+                  </a></li>
+                {{/ each }}
+              </ul>
+            </li>
+            <li class="dropdown" >
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Apps <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                {{# each pages }}
+                  <li><a href="{{ path }}">
+                    {{ title }}
+                  </a></li>
+                {{/ each }}
+              </ul>
+            </li>
+
+            <!--li><a href="#">Page 2</a></li-->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!--li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li-->
+            {{#if currentUser }}
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{currentUser.profile.name}} <i class="fa fa-cog" aria-hidden="true"></i><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+
+                    <li><a href="/admin" ><i class="fa fa-cog"></i> Administración</a></li>
+                    <li><a href="/admin/my-account/change-password" ><i class="fa fa-lock"></i> {{ i18n 'accounts.changePassword.title' }}</a></li>
+                    <li><a href="#" class="logout"><i class="fa fa-sign-out"></i>{{ i18n 'global.logout' }}</a></li>
+                  </ul>
+                </li>
+
+            {{else}}
+              <!--li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li-->
+              <li><a href="/login" class="login"><i class="fa fa-sign-in"></i> Log in</a></li>
+            {{/if}}
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+  </header>
+  {{ else }}
+    <a href="#" class="reload"><i class="fa fa-sign-in"></i> reload</a>
+  {{/if}}
+</template>
+
+<template name="headerLink">
+  <li><a href="{{id}}" class="scroll-link">{{title}}</a></li>
+</template>

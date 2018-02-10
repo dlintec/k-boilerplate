@@ -1,0 +1,12 @@
+<template name="flow_layout">
+
+      <div class="layout-page" style="background-color:{{dict 'site.defaultColour' '#ffffff'}}">
+          <div id="top">
+            {{> Template.dynamic template=top}}
+          </div>
+          <div id="main" >
+              {{> Template.dynamic template=main}}
+          </div>
+      </div>
+      {{> divBuilderBottomPanel}}
+</template>

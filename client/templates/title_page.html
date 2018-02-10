@@ -1,0 +1,81 @@
+<template name="titlePage">
+
+<div class="" style="min-height:50px">
+
+</div>
+  <div class="img-hero fade-in" style="min-height:40vh;background-image: url({{gridfsURL (dict 'site.heroImage.url' '/dlintec-hero.png')}})" >
+
+      {{>divBuilder id="hero-logo" class="fit" src=(getDictImage 'site.logoBig.url')  }}
+  </div>
+
+  <!--
+  {{>divBuilder id="testSVG" src="http://11.0.0.132/dlintec-logo-vert-1024x1024.svg" style='width:200;height:200;'}}
+  -->
+
+  <div class="container-fluid fade-in" style="min-height:50vh">
+    <button data-tooltip="Obviously play!!!" type="button" class="btn start-hero-animation">
+      <i  class="fa fa-play-circle"></i> Play
+    </button>
+    {{>divBuilder id="loadtest" src="notfound.html" scalable=true width=150}}
+
+    <p class="section-normal">{{{dict 'site.main_content' 'Main Content'}}}</p>
+    <!--img src="{{dict 'site.logoTitle.url'}}"
+    <p class="section-subtitle">{{dict 'site.title' ''}}</p>-->
+    <p class="section-normal">{{dict 'site.description' ''}}</p>
+    <!--  <a class="btn btn-default btn-file btn-xs"  href="{{dict 'site.pdf.url'}}" target="_blank">Archivo</a> -->
+    <!-- {{> atForm}}
+    test-->
+    <div class="row">
+      {{# each sections }}
+        <div class="col-sm-6" >
+            <a class="scroll-link section-thumb"  href="{{ id }}">
+              <div class="media">
+                <div class="media-left">
+                  <img src="{{ gridfsURL thumb.url }}" class="media-object" style="width:10vh;">
+                  <p> </p>
+                </div>
+                <div class="media-body">
+                  <h3 class="media-heading section-normal">{{ title }}</h3>
+                  <p class="section-normal" style="color:rgb(126, 126, 126);">{{ headline}}</p>
+                </div>
+              </div>
+            </a>
+        </div>
+
+      {{/ each }}
+    </div>
+
+
+
+<!--p><button type="button" class="btn btn-primary">Primary</button><button type="button" class="btn btn-secondary">Secondary</button><button type="button" class="btn btn-success">Success</button><button type="button" class="btn btn-info">Info</button><button type="button" class="btn btn-warning">Warning</button><button type="button" class="btn btn-danger">Danger</button><button type="button" class="btn btn-link">Link</button><span style="color: rgb(156, 0, 0);"><br></span></p-->
+    {{#if currentUser }}
+
+    {{else}}
+       <p class="section-normal"> Usuario sin autenticar </p>
+         <a href="/login" class="btn btn-default btn-file btn-xs"><i class="fa fa-sign-in"></i> Log in</a>
+    {{/if}}
+    <!--p>{{> i18n_buttons class="btn btn-danger"}}</p-->
+    <!--p>{{_ "hello"}} test2</p-->
+    <a href="/release-unsigned.apk" rel='external' download class="btn btn-default btn-file btn-xs"><i class="fa fa-android " aria-hidden="true"></i> Android App</a>
+    <button data-tooltip="Fewer clics" data-social-login="loginWithFacebook" type="button" class="btn">
+      <i class="fa fa-facebook"></i> Sign in with Facebook
+    </button>
+
+  </div>
+  <!--div class="title-section overlay" >
+
+  </div-->
+
+
+{{ > hierarchyTree}}
+
+{{ > orgEditor }}
+
+<div id="sankey" >
+
+</div>
+
+
+
+{{ > tooltips }}
+</template>

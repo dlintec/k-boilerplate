@@ -1,0 +1,39 @@
+svg .link {
+  opacity: 0.3;
+  stroke-width: 3px;
+  /*fill: steelblue;*/
+}
+
+svg .link:hover {
+  opacity: 0.5;
+}
+
+svg g.sankey {
+  font-size: 10pt;
+}
+svg .node {
+
+  font-size: 8pt;
+
+}
+
+svg .node line {
+  stroke-width: 3px;
+  stroke: #444;
+}
+svg .node-type-process line {
+  stroke-width: 4px;
+  stroke: #000;
+}
+
+svg .group rect {
+  fill: #eee;
+  stroke: #bbb;
+  stroke-width: 0px;
+
+}
+
+svg .group text {
+  fill: #999;
+  font-size: 14pt;
+}

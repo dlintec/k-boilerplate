@@ -1,0 +1,18 @@
+<template name="orionBootstrapAccountsIndex">
+  {{# Layout template="orionBootstrapSmallContentOffset" }}
+    {{# Layout template="orionBootstrapTitle" }}
+      {{ i18n 'accounts.index.title' }}
+      {{# if userHasPermission 'accounts.showCreate' }}
+        <a href="{{ RouterLayerPathFor 'accounts.create' }}" class="btn btn-default"><i class="fa fa-plus"></i></a>
+      {{/ if }}
+    {{/ Layout }}
+
+    {{# Layout template="orionBootstrapContentContainer" }}
+      <div class="index-table-overflow">
+        {{> tabular table=table class="table index-table" id="orion_accounts_index" }}
+      
+      </div>
+
+    {{/ Layout }}
+  {{/ Layout }}
+</template>

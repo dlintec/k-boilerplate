@@ -1,0 +1,37 @@
+{
+  "hello": "Saludos" ,
+   "sections": "Secciones",
+   "simpleSchema" : {
+      "errors" : {
+        "required": "[label] es obligatorio",
+        "regex" : {
+          "SimpleSchema.RegEx.Email" : "[label] debe ser una dirección de correo válida"
+
+        },
+        "passwordMismatch":"Contraseñas no coinciden",
+        "badDate":"[label] no es fecha válida",
+        "expectedArray":"[label] debe ser de tipo array",
+        "expectedBoolean":"[label] debe ser falso o verdadero",
+        "expectedConstructor":"[label] debe ser de tipo [type]",
+        "expectedNumber":"[label] debe ser un número",
+        "expectedObject":"[label] debe ser un objeto",
+        "expectedString":"[label] debe ser de tipo texto (string)",
+        "insertNotAllowed":"[label] no debe modificarse durante incerción",
+        "keyNotInSchema":"[key] no es permitido por el esquema",
+        "maxCount":"No puede establecer mas de [maxCount] valores",
+        "maxDate":"[label] no puede ser despues de [max]",
+        "maxNumber":"[label] no debe exceder [max]",
+        "maxNumberExclusive":"[label] debe ser menor a [max]",
+        "maxString":"[label] no puede exceder los [max] caracteres",
+        "minCount":"Debe especificar al menos [minCount] valores",
+        "minDate":"[label] debe ser igual o posterior a [min]",
+        "minNumber":"[label] debe ser al menos [min]",
+        "minNumberExclusive":"[label] Debe ser mayor a [min]",
+        "minString":"[label] debe contener al menos [min] caracteres",
+        "noDecimal":"[label] debe ser un entero",
+        "notAllowed":"[value] no es un valor permitido",
+        "notUnique":"[label] debe ser único",
+        "updateNotAllowed":"[label] no de be modificarse en actualización"
+      }
+    }
+ }

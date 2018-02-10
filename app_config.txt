@@ -1,0 +1,1 @@
+MOBILE_BUILD_URL=https://dlintec-inteligencia.com

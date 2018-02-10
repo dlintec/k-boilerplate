@@ -1,0 +1,30 @@
+<template name="section">
+
+
+
+
+  <!--div id="{{id}}" class="section {{#if hasBackgroundImage}}overlay{{/if}}" style="{{background}}">
+  </div-->
+
+
+    <h2 id="{{id}}">+</h2>
+    <div  class="img-hero" style="{{background}}" >
+
+      <div class="container" >
+        <h2 > </h2>
+        <img src="{{ gridfsURL thumb.url }}" class="media-object" style="height:25vh;width:25vh;align:left;">
+      </div>
+    </div>
+    <div style="background-color:{{backgroundColour}};">
+
+      <div class="container" style="min-height:70vh;" >
+        <h2 class="section-subtitle" style="color:{{textColour}};">{{title}}<a class="btn btn-link scroll-home" href="/#"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a></h2>
+        <p  style="color:{{textColour}};">{{headline}}</p>
+        <p >{{detail}}</p>
+        <p >{{{content}}}</p>
+        <p ><a class="btn btn-link scroll-home" href="/#"><i class="fa fa-home fa-lg" aria-hidden="true"></i> {{ i18n 'global.start' }}</a></p>
+      </div>
+    </div>
+
+
+</template>
