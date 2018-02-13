@@ -5,7 +5,7 @@
 A [Dockerfile](http://docs.docker.io/en/latest/reference/builder/) for building a [Meteor](http://www.meteor.com)
 development container.
 
-Updated to **Meteor version 1.4.2.3.**
+Updated to **Meteor version 1.6.1.**
 Mantainer: Tadeo Gutierrez
 
 Install & Run
