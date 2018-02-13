@@ -68,8 +68,8 @@ transition: opacity 2s ease-in;
 
 .panel-body {
     margin-bottom: 0px;
-    padding-bottom: : 0px;
-    padding-top: : 0px;
+    padding-bottom:  0px;
+    padding-top:  0px;
     background-color: inherit;
     border: 1px solid transparent;
     border-radius: 0px;
@@ -388,7 +388,7 @@ hr {
 }
 
 .input-group-btn {
-  background-color:rgba(0, 0, 0, 0.8)
+  background-color:rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
   -box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
 font-size: 20px;
